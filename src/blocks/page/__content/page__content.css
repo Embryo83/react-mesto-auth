@@ -1,0 +1,12 @@
+.page__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px auto 66px;
+}
+
+@media screen and (max-width: 320px) {
+    .page__content {
+        margin: 42px auto 48px;
+    }
+}
