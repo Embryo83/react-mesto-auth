@@ -1,0 +1,15 @@
+.login__signup-container {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 720px) {
+  .login__signup-container {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+}
