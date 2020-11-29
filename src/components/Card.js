@@ -1,6 +1,7 @@
 import React from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import cn from "classnames";
+import PropTypes from "prop-types";
 
 function Card(props) {
   const currentUser = React.useContext(CurrentUserContext);
@@ -55,5 +56,17 @@ function Card(props) {
     </li>
   );
 }
+
+Card.propTypes = {
+  onCardClick: PropTypes.func.isRequired,
+  onCardLike: PropTypes.func.isRequired,
+  onCardDelete: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  owner: PropTypes.object.isRequired,
+  likes: PropTypes.array,
+  link: PropTypes.string,
+  name: PropTypes.string,
+  length: PropTypes.number,
+};
 
 export default Card;
