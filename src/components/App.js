@@ -43,6 +43,9 @@ const App = () => {
 
   const tokenCheck = () => {
     const jwt = localStorage.getItem("jwt");
+    if (!jwt) {
+      return;
+    }
     if (jwt) {
       auth
         .getContent(jwt)
