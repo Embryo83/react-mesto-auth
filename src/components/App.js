@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import { Redirect, Route, useHistory, Switch } from "react-router-dom";
+import { Route, useHistory, Switch } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import Header from "./Header";
 import Login from "./Login";
@@ -274,13 +274,10 @@ const App = () => {
               onCardDelete={handleCardDelete}
               cards={cards}
             />
-
-            <Route path="/">
-              {loggedIn ? <Redirect to="/" /> : <Redirect to="/sign-in" />}
-            </Route>
           </Switch>
 
           {loggedIn && <Footer />}
+          
           <EditAvatarPopup
             isOpen={isEditAvatarPopupOpen}
             onClose={closeAllPopups}
