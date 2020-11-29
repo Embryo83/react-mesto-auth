@@ -37,7 +37,7 @@ function AddPlacePopup(props) {
             type="text"
             name="place"
             placeholder="Название"
-            value={name || ''}
+            value={name}
             className="popup__input popup__input_type_place"
             id="place-input"
             minLength="1"
